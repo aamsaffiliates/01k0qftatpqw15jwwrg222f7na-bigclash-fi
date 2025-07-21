@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksklusiivinen Suomalainen Tervetuliaisbbonus - BigClash Casino</title>
+    <meta name="description" content="Lunasta eksklusiivinen suomalainen tervetuliaisbbonus BigClash Casinossa. 100% jopa 500€ + 200 ilmaiskierrosta vain suomalaisille pelaajille.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Eksklusiivinen Suomalainen Tervetuliaisbbonus - BigClash Casino">
+    <meta property="og:description" content="Lunasta eksklusiivinen suomalainen tervetuliaisbbonus BigClash Casinossa. 100% jopa 500€ + 200 ilmaiskierrosta vain suomalaisille pelaajille.">
+    <meta property="og:url" content="https://bigclash.fi/bonus">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fi_FI">
+    
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-bg: #1e3a8a;
+            --secondary-bg: #2563eb;
+            --dark-bg: #1e40af;
+            --card-bg: #3b82f6;
+            --sidebar-bg: #1e40af;
+            --accent-green: #22c55e;
+            --accent-yellow: #fbbf24;
+            --accent-orange: #f97316;
+            --text-primary: #ffffff;
+            --text-secondary: #e2e8f0;
+            --border-color: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--primary-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-green);
+            border-radius: 3px;
+        }
+
+        /* Navigation */
+        .main-nav {
+            background: rgba(30, 58, 138, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 50%, #6366f1 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .bonus-highlight {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+            border: 3px solid var(--accent-green);
+            border-radius: 25px;
+            padding: 3rem;
+            backdrop-filter: blur(15px);
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bonus-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .bonus-amount {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent-yellow);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1rem;
+        }
+
+        .bonus-subtitle {
+            font-size: 1.5rem;
+            color: var(--accent-green);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .exclusive-badge {
+            background: linear-gradient(45deg, var(--accent-orange), #dc2626);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        /* Bonus Features Grid */
+        .bonus-features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .bonus-feature {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bonus-feature:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-green);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .bonus-feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-yellow));
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .feature-value {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent-yellow);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background: var(--accent-green);
+            color: white;
+            padding: 1.5rem 4rem;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+            display: inline-block;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            background: #16a34a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 5rem 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .benefit-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .benefit-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .benefit-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .section-title .accent {
+            color: var(--accent-green);
+        }
+
+        /* Terms Section */
+        .terms-section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .terms-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .terms-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+        }
+
+        .terms-list li:last-child {
+            border-bottom: none;
+        }
+
+        .terms-list li::before {
+            content: '✓';
+            color: var(--accent-green);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .bonus-amount {
+                font-size: 2.5rem;
+            }
+            
+            .bonus-features-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .bonus-highlight {
+                padding: 2rem 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                padding: 1.2rem 2rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-in {
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: slideIn 0.8s ease forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Pulse animation for CTA */
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+            }
+            50% {
+                box-shadow: 0 6px 20px rgba(34, 197, 94, 0.6);
+            }
+            100% {
+                box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav fixed top-0 w-full z-50">
+        <div class="flex justify-between items-center px-4 py-3">
+            <div>
+                    <a href="/">
+                        <img src="images/logo.png" alt="BigClash Logo" class="h-16">
+                    </a>
+                </div>
+            <div class="flex space-x-2">
+                <button onclick="redirectToCasino()" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold text-sm transition-colors">
+                    KIRJAUDU
+                </button>
+                <button onclick="redirectToCasino()" class="cta-button text-sm px-4 py-2">
+                    LIITY NYT
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center pt-32 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="hero-content fade-in">
+                    <div class="exclusive-badge">
+                        🇫🇮 EKSKLUSIIVINEN SUOMALAISILLE
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        SUOMEN<br> PARAS TERVETULOBONUS<br>
+                        <span class="text-green-400">"BIGCLASH"</span>
+                    </h1>
+                    
+                    <div class="bonus-highlight">
+                        <div class="bonus-subtitle">EKSKLUSIIVINEN SUOMALAINEN BONUS</div>
+                        <div class="bonus-amount">100% JOPA 500€</div>
+                        <div class="text-2xl text-blue-200 mb-4">+ 200 ILMAISKIERROSTA</div>
+                        <div class="text-lg text-gray-300">Vain uusille suomalaisille pelaajille</div>
+                    </div>
+                    
+                    <button onclick="redirectToCasino()" class="cta-button pulse">
+                        LUNASTA BONUS NYT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonus Features Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title fade-in">
+                Bonuksen <span class="accent">Ominaisuudet</span>
+            </h2>
+
+            <p class="text-center">
+                <a class="underline hover:no-underline" href="/">BigClash</a>
+                </p>
+            
+            <div class="bonus-features-grid max-w-4xl mx-auto">
+                <div class="bonus-feature fade-in" style="animation-delay: 0.1s;">
+                    <span class="feature-icon">🎯</span>
+                    <div class="feature-title">Kierrätysvaatimus</div>
+                    <div class="feature-value">40x</div>
+                    <div class="feature-description">Kohtuullinen kierrätysvaatimus bonukselle ja ilmaiskierroksille</div>
+                </div>
+                
+                <div class="bonus-feature fade-in" style="animation-delay: 0.2s;">
+                    <span class="feature-icon">💰</span>
+                    <div class="feature-title">Maksimi Bonus</div>
+                    <div class="feature-value">500€</div>
+                    <div class="feature-description">Suurin mahdollinen bonussumma suomalaisille pelaajille</div>
+                </div>
+                
+                <div class="bonus-feature fade-in" style="animation-delay: 0.3s;">
+                    <span class="feature-icon">👤</span>
+                    <div class="feature-title">Kelpoisuus</div>
+                    <div class="feature-value">Vain uudet</div>
+                    <div class="feature-description">Tarjous on voimassa vain uusille rekisteröityneille pelaajille</div>
+                </div>
+                
+                <div class="bonus-feature fade-in" style="animation-delay: 0.4s;">
+                    <span class="feature-icon">🇫🇮</span>
+                    <div class="feature-title">Eksklusiivinen</div>
+                    <div class="feature-value">Vain Suomi</div>
+                    <div class="feature-description">Erityinen bonus vain suomalaisille pelaajille</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casino Benefits -->
+    <section class="benefits-section">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title fade-in">
+                Miksi Valita <span class="accent">BigClash Casino?</span>
+            </h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in" style="animation-delay: 0.1s;">
+                    <span class="benefit-icon">🎰</span>
+                    <h3 class="benefit-title">Yli 2000 Peliä</h3>
+                    <p class="benefit-description">Laaja valikoima kolikkopelejä, pöytäpelejä ja live-kasinopelejä parhaimmilta pelintarjoajilta kuten NetEnt, Microgaming ja Play'n GO.</p>
+                </div>
+                
+                <div class="benefit-card fade-in" style="animation-delay: 0.2s;">
+                    <span class="benefit-icon">⚡</span>
+                    <h3 class="benefit-title">Pay'n'Play Teknologia</h3>
+                    <p class="benefit-description">Pelaa välittömästi ilman rekisteröitymistä Trustly-teknologian avulla. Kirjaudu pankkitunnuksilla ja aloita pelaaminen heti.</p>
+                </div>
+                
+                <div class="benefit-card fade-in" style="animation-delay: 0.3s;">
+                    <span class="benefit-icon">🔒</span>
+                    <h3 class="benefit-title">Turvallinen ja Luotettava</h3>
+                    <p class="benefit-description">Kansainvälinen pelilisenssi, SSL-salaus ja vastuullisen pelaamisen työkalut takaavat turvallisen peliympäristön.</p>
+                </div>
+                
+                <div class="benefit-card fade-in" style="animation-delay: 0.4s;">
+                    <span class="benefit-icon">💸</span>
+                    <h3 class="benefit-title">Nopeat Kotiutukset</h3>
+                    <p class="benefit-description">Trustly-kotiutukset 1-2 tunnissa, pankkisiirrot 1-3 arkipäivässä. Kaikki maksut euroissa ilman valuutanvaihtomaksuja.</p>
+                </div>
+                
+                <div class="benefit-card fade-in" style="animation-delay: 0.5s;">
+                    <span class="benefit-icon">🎁</span>
+                    <h3 class="benefit-title">Jatkuvat Kampanjat</h3>
+                    <p class="benefit-description">Viikoittaiset reload-bonukset, cashback-tarjoukset, turnaukset ja VIP-ohjelma palkitsevat uskollisia pelaajia.</p>
+                </div>
+                
+                <div class="benefit-card fade-in" style="animation-delay: 0.6s;">
+                    <span class="benefit-icon">📱</span>
+                    <h3 class="benefit-title">Mobiilioptimoidut Pelit</h3>
+                    <p class="benefit-description">Kaikki pelit toimivat täydellisesti mobiililaitteilla. Pelaa milloin ja missä tahansa ilman latauksia.</p>
+                </div>
+                
+                <div class="benefit-card fade-in" style="animation-delay: 0.7s;">
+                    <span class="benefit-icon">🎧</span>
+                    <h3 class="benefit-title">24/7 Asiakastuki</h3>
+                    <p class="benefit-description">Suomenkielinen asiakastuki saatavilla ympäri vuorokauden live-chatin, sähköpostin ja puhelimen kautta.</p>
+                </div>
+                
+                <div class="benefit-card fade-in" style="animation-delay: 0.8s;">
+                    <span class="benefit-icon">🏆</span>
+                    <h3 class="benefit-title">VIP-ohjelma</h3>
+                    <p class="benefit-description">Eksklusiivinen VIP-ohjelma tarjoaa henkilökohtaisen palvelun, korkeammat rajat ja erityiset bonukset.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms and Conditions -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="terms-section fade-in">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Bonuksen Käyttöehdot</h3>
+                    <ul class="terms-list">
+                        <li>Bonus on voimassa vain uusille pelaajille, jotka rekisteröityvät ensimmäistä kertaa</li>
+                        <li>Vähimmäistalletus bonuksen aktivoimiseksi on 20€</li>
+                        <li>Bonuksella ja ilmaiskierrosten voitoilla on 40x kierrätysvaatimus</li>
+                        <li>Maksimi bonussumma on 500€ + 200 ilmaiskierrosta</li>
+                        <li>Ilmaiskierrokset hyvitetään San Quentin Deathrow -peliin</li>
+                        <li>Bonuksella on 30 päivän voimassaoloaika aktivoinnista</li>
+                        <li>Ilmaiskierrosten voitoilla on 7 päivän voimassaoloaika</li>
+                        <li>Maksimi panossumma bonusvaroilla on 5€ per kierros</li>
+                        <li>Bonus on eksklusiivinen vain Suomessa asuville pelaajille</li>
+                        <li>Täydet käyttöehdot löytyvät kasinon verkkosivuilta</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 text-center">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto fade-in">
+                <h2 class="text-4xl font-bold mb-4">Valmis Aloittamaan?</h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Liity tuhansien suomalaisten pelaajien joukkoon ja lunasta eksklusiivinen tervetuliaisbonuksesi tänään!
+                </p>
+                <button onclick="redirectToCasino()" class="cta-button pulse">
+                    REKISTERÖIDY JA LUNASTA BONUS
+                </button>
+                <div class="mt-6 text-sm text-gray-400">
+                    18+ | Pelaa vastuullisesti | Peluuri.fi | BeGambleAware.org
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 bg-opacity-50 py-8 border-t border-blue-600 border-opacity-30">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                        <img src="images/logo.png" alt="BigClash Logo" class="h-24 mx-auto mb-2">
+                        <p class="text-white text-center text-sm">Valmiina suureen yhteenottoon?</p>
+                    </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Asiakastuki</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Live Chat: 24/7</li>
+                        <li>Sähköposti: tuki@bigclash.fi</li>
+                        <li>Puhelin: 09-123-4567</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Vastuullinen pelaaminen</h4>
+                    <div class="space-y-2 text-gray-400 text-sm">
+                        <div>⚠️ Vain 18+</div>
+                        <div>🕒 Aseta rajat</div>
+                        <div>📞 Peliongelman apu: 0800-100-101</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-600 border-opacity-30 pt-6 mt-6 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 BigClash Casino. Kaikki oikeudet pidätetään. | 
+                    <a href="#" class="hover:text-green-400">Käyttöehdot</a> | 
+                    <a href="#" class="hover:text-green-400">Tietosuoja</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Redirect to Casino
+        function redirectToCasino() {
+            window.location.href = '/go';
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .slide-in').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Add some interactive effects
+        document.querySelectorAll('.bonus-feature').forEach(feature => {
+            feature.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            feature.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigClash Casino | 100% jopa 700€ + 200 ilmaiskierrosta | Paras nettikasino Suomessa</title>
+    <meta name="description" content="Liity BigClash Casinoon ja lunasta 100% bonus jopa 700€ + 200 ilmaiskierrosta. Pelaa parhaita kolikkopelejä ja live-kasinopelejä suomalaisilla maksutavoilla.">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="BigClash Casino | 100% jopa 700€ + 200 ilmaiskierrosta | Paras nettikasino Suomessa">
+    <meta property="og:description" content="Liity BigClash Casinoon ja lunasta 100% bonus jopa 700€ + 200 ilmaiskierrosta. Pelaa parhaita kolikkopelejä ja live-kasinopelejä suomalaisilla maksutavoilla.">
+    <meta property="og:url" content="https://bigclash.fi">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fi_FI">
+    
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-bg: #1e3a8a;
+            --secondary-bg: #2563eb;
+            --dark-bg: #1e40af;
+            --card-bg: #3b82f6;
+            --sidebar-bg: #1e40af;
+            --accent-green: #22c55e;
+            --accent-yellow: #fbbf24;
+            --text-primary: #ffffff;
+            --text-secondary: #e2e8f0;
+            --border-color: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--primary-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-green);
+            border-radius: 3px;
+        }
+
+        /* Navigation */
+        .main-nav {
+            background: rgba(30, 58, 138, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .nav-tabs {
+            background: var(--dark-bg);
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .nav-tab {
+            padding: 1rem 2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-tab:hover,
+        .nav-tab.active {
+            color: var(--text-primary);
+            border-bottom-color: var(--accent-green);
+            background: rgba(59, 130, 246, 0.2);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--sidebar-bg);
+            width: 280px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 40;
+            transition: transform 0.3s ease;
+            border-right: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .sidebar-item {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin: 0.25rem 1rem;
+        }
+
+        .sidebar-item:hover {
+            background: rgba(34, 197, 94, 0.1);
+            color: var(--accent-green);
+            transform: translateX(5px);
+        }
+
+        .search-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            color: var(--text-primary);
+            width: 100%;
+            font-size: 0.9rem;
+        }
+
+        .search-bar::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .search-bar:focus {
+            outline: none;
+            border-color: var(--accent-green);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 50%, #6366f1 100%);
+            min-height: 90vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .bonus-display {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .bonus-amount {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent-yellow);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            background: var(--accent-green);
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+        }
+
+        .cta-button-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 1.2rem 3rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .cta-button-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+        }
+
+        /* Pay'n'Play Section */
+        .paynplay-section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .paynplay-features {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .paynplay-feature {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .paynplay-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Slots Grid */
+        .slots-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .slot-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+
+        .slot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent-green);
+        }
+
+        .slot-card img {
+            width: 100%;
+            aspect-ratio: 2/3;
+            object-fit: cover;
+        }
+
+        .slot-card-content {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .slot-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .slot-provider {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 5rem 0;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .section-title .accent {
+            color: var(--accent-green);
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: var(--text-secondary);
+        }
+
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 300px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent-green), #16a34a);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-section .cta-button {
+            background: white;
+            color: var(--accent-green);
+            font-size: 1.3rem;
+            padding: 1.5rem 4rem;
+        }
+
+        .cta-section .cta-button:hover {
+            background: #f8f9fa;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-bg);
+            border-top: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 3rem 0 2rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .bonus-amount {
+                font-size: 2rem;
+            }
+            
+            .nav-tabs {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .paynplay-section {
+                padding: 2rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .main-content {
+                margin-left: 280px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-in {
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: slideIn 0.8s ease forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav fixed top-0 w-full z-50">
+        <div class="flex justify-between items-center px-4 py-3">
+            <div class="flex items-center space-x-4">
+                <button id="sidebar-toggle" class="md:hidden text-white text-xl">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div>
+                    <a href="/">
+                        <img src="images/logo.png" alt="BigClash Logo" class="h-16">
+                    </a>
+                </div>
+            </div>
+            <div class="flex space-x-2">
+                <button onclick="redirectToCasino()" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold text-sm transition-colors">
+                    KIRJAUDU
+                </button>
+                <button onclick="redirectToCasino()" class="cta-button text-sm px-4 py-2">
+                    LIITY NYT
+                </button>
+            </div>
+        </div>
+        
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs hidden md:flex">
+            <a href="#kasino" class="nav-tab active">KASINO</a>
+            <a href="#live-kasino" class="nav-tab">LIVE-KASINO</a>
+            <a href="#urheilu" class="nav-tab">URHEILU</a>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <div class="p-6 pt-24 mt-16">
+            <!-- Search Bar -->
+            <div class="mb-6">
+                <input type="text" placeholder="Etsi pelejä, kategorioita..." class="search-bar">
+            </div>
+            
+            <!-- Navigation Items -->
+            <nav class="space-y-1">
+                <a href="#" class="sidebar-item">Koti</a>
+                <a href="#" class="sidebar-item">Kasino</a>
+                <a href="#" class="sidebar-item">Live-kasino</a>
+                <a href="#" class="sidebar-item">Kolikkopelit</a>
+                <a href="#" class="sidebar-item">Jackpotit</a>
+                <a href="#" class="sidebar-item">Uudet pelit</a>
+                <a href="#" class="sidebar-item">Suosikit</a>
+                <a href="#" class="sidebar-item">Turnaukset</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Hero Section -->
+        <section class="mt-16 hero-section flex items-center justify-center pt-32 pb-16">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="hero-content fade-in">
+                        <h1 class="hero-title">
+                            SUOMEN<br>
+                            <span class="text-green-400">PARAS</span><br>
+                            NETTIKASINO
+                        </h1>
+                        
+                        <div class="bonus-display">
+                            <div class="text-lg font-semibold text-gray-200 mb-2">TERVETULIAISBbonus</div>
+                            <div class="bonus-amount">100% JOPA 700€</div>
+                            <div class="text-xl text-blue-200 mb-2">+ 200 ILMAISKIERROSTA</div>
+                            <div class="text-sm text-gray-300">Eksklusiiviset kierrokset San Quentin Deathrow -pelissä</div>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#register" class="cta-button">
+                                REKISTERÖIDY NYT
+                            </a>
+                            <a href="#paynplay" class="cta-button-secondary">
+                                LUE LISÄÄ
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center fade-in">
+                        <img src="images/hero.png" alt="BigClash Casino Suomi" class="w-full max-w-md mx-auto rounded-2xl shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pay'n'Play Section -->
+        <section id="paynplay" class="content-section">
+            <div class="container mx-auto px-4">
+                <div class="paynplay-section">
+                    <h2 class="text-3xl font-bold text-center mb-4">
+                        <span class="accent">Pay'n'Play</span> Kasino
+                    </h2>
+                    <p class="text-center text-lg text-gray-200 mb-6">
+                        Pelaa välittömästi ilman rekisteröitymistä - vain pankkitunnuksilla sisään ja pelaamaan!
+                    </p>
+                    
+                    <div class="paynplay-features">
+                        <div class="paynplay-feature">
+                            <span class="paynplay-icon">⚡</span>
+                            <h3 class="text-xl font-bold mb-2">Välitön pääsy</h3>
+                            <p class="text-gray-300">Kirjaudu pankkitunnuksilla ja aloita pelaaminen heti</p>
+                        </div>
+                        
+                        <div class="paynplay-feature">
+                            <span class="paynplay-icon">🔒</span>
+                            <h3 class="text-xl font-bold mb-2">Turvallinen</h3>
+                            <p class="text-gray-300">Suomalainen Trustly-teknologia takaa turvallisuuden</p>
+                        </div>
+                        
+                        <div class="paynplay-feature">
+                            <span class="paynplay-icon">💸</span>
+                            <h3 class="text-xl font-bold mb-2">Nopeat kotiutukset</h3>
+                            <p class="text-gray-300">Voitot tilillesi muutamassa minuutissa</p>
+                        </div>
+                        
+                        <div class="paynplay-feature">
+                            <span class="paynplay-icon">📱</span>
+                            <h3 class="text-xl font-bold mb-2">Mobiili</h3>
+                            <p class="text-gray-300">Toimii täydellisesti kaikilla laitteilla</p>
+                        </div>
+                    </div>
+                    
+<div class="text-center fade-in mt-8">
+                        <img src="images/bonus-crab.png" alt="BigClash Casino Suomi" class="w-full max-w-md mx-auto rounded-2xl shadow-2xl">
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <button onclick="redirectToCasino()" class="cta-button">
+                            KOKEILE PAY'N'PLAY
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slots Grid -->
+        <section class="content-section">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">
+                    Suosituimmat <span class="accent">Kolikkopelit</span>
+                </h2>
+                
+                <div class="slots-grid">
+                    <div class="slot-card fade-in" onclick="redirectToCasino()" style="animation-delay: 0.1s;">
+                        <img src="images/gonzo-quest.jpg" alt="Gonzo's Quest">
+                        <div class="slot-card-content">
+                            <h3 class="slot-title">Gonzo's Quest</h3>
+                            <p class="slot-provider">Play'n GO</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slot-card fade-in" onclick="redirectToCasino()" style="animation-delay: 0.2s;">
+                        <img src="images/madame-destiny.jpeg" alt="Madame Destiny Megaways">
+                        <div class="slot-card-content">
+                            <h3 class="slot-title">Madame Destiny Megaways</h3>
+                            <p class="slot-provider">NetEnt</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slot-card fade-in" onclick="redirectToCasino()" style="animation-delay: 0.3s;">
+                        <img src="images/san-quentin" alt="San Quentin Deathrow 2">
+                        <div class="slot-card-content">
+                            <h3 class="slot-title">San Quentin Deathrow 2</h3>
+                            <p class="slot-provider">Hacksaw Gaming</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slot-card fade-in" onclick="redirectToCasino()" style="animation-delay: 0.4s;">
+                        <img src="images/le-bandit.jpg" alt="Le Bandit">
+                        <div class="slot-card-content">
+                            <h3 class="slot-title">Le Bandit</h3>
+                            <p class="slot-provider">Pragmatic Play</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slot-card fade-in" onclick="redirectToCasino()" style="animation-delay: 0.5s;">
+                        <img src="images/bonanza.jpeg" alt="Bonanza">
+                        <div class="slot-card-content">
+                            <h3 class="slot-title">Bonanza</h3>
+                            <p class="slot-provider">Pragmatic Play</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slot-card fade-in" onclick="redirectToCasino()" style="animation-delay: 0.6s;">
+                        <img src="images/moon-princess.jpg" alt="Moon Princess">
+                        <div class="slot-card-content">
+                            <h3 class="slot-title">Moon Princess</h3>
+                            <p class="slot-provider">Relax Gaming</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <button onclick="redirectToCasino()" class="cta-button">
+                        NÄYTÄ KAIKKI PELIT
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="content-section">
+            <div class="container mx-auto px-4">
+                <h2 class="section-title">
+                    Usein Kysytyt <span class="accent">Kysymykset</span>
+                </h2>
+                
+                <div class="max-w-3xl mx-auto">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(0)">
+                            <h3 class="text-lg font-bold">Miten lunasta tervetuliaisbonuksen?</h3>
+                            <span class="text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Rekisteröidy uudeksi pelaajaks, vahvista henkilöllisyytesi ja tee ensimmäinen talletus vähintään 20€. 100% bonus jopa 700€ ja 200 ilmaiskierrosta hyvitetään automaattisesti tilillesi.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(1)">
+                            <h3 class="text-lg font-bold">Mitkä ovat kierrätysvaatimukset?</h3>
+                            <span class="text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tervetuliaisbonuksella on 35x kierrätysvaatimus ja ilmaiskierrosten voitoilla 40x kierrätysvaatimus. Tämä tarkoittaa, että sinun täytyy pelata bonussumma läpi 35 kertaa ennen kuin voit nostaa voittoja.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(2)">
+                            <h3 class="text-lg font-bold">Kuinka kauan kotiutukset kestävät?</h3>
+                            <span class="text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Kotiutusajat vaihtelevat maksutavan mukaan. Trustly-kotiutukset käsitellään 1-2 tunnissa, pankkisiirrot 1-3 arkipäivässä ja e-lompakot 24 tunnin sisällä.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(3)">
+                            <h3 class="text-lg font-bold">Onko BigClash Casino laillinen Suomessa?</h3>
+                            <span class="text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Kyllä, BigClash Casino toimii kansainvälisellä peliluvanalla ja noudattaa kaikkia kansainvälisiä pelisääntöjä. Kasino tarjoaa turvallisen ja luotettavan peliympäristön suomalaisille pelaajille.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(4)">
+                            <h3 class="text-lg font-bold">Mitä maksutapoja voin käyttää?</h3>
+                            <span class="text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tuemme kaikkia suosittuja suomalaisia maksutapoja: Trustly, pankkisiirto, Visa, Mastercard, MuchBetter, Skrill ja Neteller. Kaikki maksut käsitellään euroissa ilman valuutanvaihtomaksuja.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Register Now CTA Section -->
+        <section id="register" class="cta-section">
+            <div class="container mx-auto px-4">
+                <h2>Aloita pelaaminen tänään!</h2>
+                <p>Liity tuhansien suomalaisten pelaajien joukkoon ja lunasta upea tervetuliaisbonuksesi</p>
+                <button onclick="redirectToCasino()" class="cta-button">
+                    REKISTERÖIDY JA PELAA NYT
+                </button>
+                <div class="mt-4 text-sm text-white text-opacity-80">
+                    18+ | Pelaa vastuullisesti | BeGambleAware.org
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-4 gap-8 mb-8">
+                    <div>
+                        <img src="images/logo.png" alt="BigClash Logo" class="h-24 mx-auto mb-2">
+                        <p class="text-white text-center text-sm">Valmiina suureen yhteenottoon?</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-4">Pikalinkit</h4>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li><a href="#" class="hover:text-green-400">Pelit</a></li>
+                            <li><a href="#" class="hover:text-green-400">Bonukset</a></li>
+                            <li><a href="#" class="hover:text-green-400">Tuki</a></li>
+                            <li><a href="#" class="hover:text-green-400">VIP-ohjelma</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-4">Asiakastuki</h4>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li>Live Chat: 24/7</li>
+                            <li>Sähköposti: tuki@bigclash.fi</li>
+                            <li>Puhelin: 09-123-4567</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold mb-4">Vastuullinen pelaaminen</h4>
+                        <div class="space-y-2 text-gray-400 text-sm">
+                            <div>⚠️ Vain 18+</div>
+                            <div>🕒 Aseta rajat</div>
+                            <div>📞 Peliongelman apu: 0800-100-101</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-blue-600 border-opacity-30 pt-8 text-center">
+                    <p class="text-gray-400 text-sm mb-4">
+                        © 2024 BigClash Casino. Kaikki oikeudet pidätetään. | 
+                        <a href="#" class="hover:text-green-400">Käyttöehdot</a> | 
+                        <a href="#" class="hover:text-green-400">Tietosuoja</a> | 
+                        <a href="#" class="hover:text-green-400">Vastuullinen pelaaminen</a>
+                    </p>
+                    <p class="text-gray-500 text-xs">
+                        Uhkapelaaminen voi aiheuttaa riippuvuutta. Pelaa vastuullisesti. Peluuri.fi
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Sidebar Toggle
+        document.getElementById('sidebar-toggle').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        });
+
+        // FAQ Toggle
+        function toggleFaq(index) {
+            const faqItems = document.querySelectorAll('.faq-item');
+            const currentItem = faqItems[index];
+            const answer = currentItem.querySelector('.faq-answer');
+            const icon = currentItem.querySelector('.faq-question span');
+            
+            // Close all other FAQ items
+            faqItems.forEach((item, i) => {
+                if (i !== index) {
+                    item.querySelector('.faq-answer').classList.remove('active');
+                    item.querySelector('.faq-question span').textContent = '+';
+                }
+            });
+            
+            // Toggle current item
+            answer.classList.toggle('active');
+            icon.textContent = answer.classList.contains('active') ? '−' : '+';
+        }
+
+        // Redirect to Casino
+        function redirectToCasino() {
+            window.location.href = '/go';
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', function(e) {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            
+            if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .slide-in').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Handle image loading errors
+        document.querySelectorAll('.slot-card img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.src = '/placeholder.svg?height=300&width=200&text=Peli+Kuva';
+            });
+        });
+
+        // Navigation tab switching
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all tabs
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
