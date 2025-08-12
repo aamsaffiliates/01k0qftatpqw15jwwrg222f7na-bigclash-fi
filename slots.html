@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigClash Kolikkopelit - Parhaat Slotit & Live Casino</title>
+    <meta name="description" content="Tutustu BigClash Casinon suosituimpiin kolikkopeleihin, Megaways-peleihin ja live-kasinoon. Pelaa parhaat pelit ja lunasta eksklusiivinen bonus!">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #1e3a8a;
+            --secondary-bg: #2563eb;
+            --dark-bg: #1e40af;
+            --card-bg: #3b82f6;
+            --sidebar-bg: #1e40af;
+            --accent-green: #22c55e;
+            --accent-yellow: #fbbf24;
+            --accent-orange: #f97316;
+            --text-primary: #ffffff;
+            --text-secondary: #e2e8f0;
+            --border-color: #3b82f6;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        html { scroll-behavior: smooth; }
+        .section-title { font-size: 2.5rem; font-weight: 800; text-align: center; margin-bottom: 2rem; color: var(--text-primary); }
+        .section-title .accent { color: var(--accent-green); }
+        .slots-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin: 2rem 0; }
+        .slot-card { background: var(--card-bg); border-radius: 16px; padding: 1rem; text-align: center; border: 2px solid rgba(255,255,255,0.1); transition: all 0.3s; position: relative; overflow: hidden; }
+        .slot-card:hover { transform: translateY(-5px) scale(1.03); border-color: var(--accent-green); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .slot-img { width: 100%; height: 140px; object-fit: cover; border-radius: 12px; margin-bottom: 1rem; }
+        .slot-title { font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem; }
+        .slot-tag { background: var(--accent-green); color: white; font-size: 0.8rem; border-radius: 8px; padding: 0.2rem 0.7rem; display: inline-block; margin-bottom: 0.5rem; }
+        .cta-section { background: var(--card-bg); border-radius: 20px; padding: 3rem 1rem; margin: 3rem 0; text-align: center; }
+        .cta-button { background: var(--accent-green); color: white; padding: 1.5rem 4rem; border-radius: 15px; font-weight: 700; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.5px; border: none; cursor: pointer; transition: all 0.3s; box-shadow: 0 6px 20px rgba(34,197,94,0.4); display: inline-block; text-decoration: none; position: relative; overflow: hidden; }
+        .cta-button:hover { background: #16a34a; transform: translateY(-3px); box-shadow: 0 8px 25px rgba(34,197,94,0.5); }
+        @media (max-width: 1024px) { .slots-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .slots-grid { grid-template-columns: 1fr; } .section-title { font-size: 1.5rem; } }
+    </style>
+</head>
+<body>
+    <nav class="main-nav fixed top-0 w-full z-50">
+        <div class="flex justify-between items-center px-4 py-3">
+            <div>
+                <a href="/">
+                    <img src="images/logo.png" alt="BigClash Logo" class="h-16">
+                </a>
+            </div>
+            <div class="flex space-x-2">
+                <button onclick="redirectToCasino()" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-semibold text-sm transition-colors">KIRJAUDU</button>
+                <button onclick="redirectToCasino()" class="cta-button text-sm px-4 py-2">LIITY NYT</button>
+            </div>
+        </div>
+    </nav>
+    <section class="pt-32 pb-8">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <h1 class="section-title">BigClash <span class="accent">Kolikkopelit</span></h1>
+            <p class="text-lg text-blue-100 mb-6">Sukella <a href="/" class="underline hover:no-underline">BigClash Casinon</a> huippuluokan pelivalikoimaan! Tarjoamme laajan valikoiman suosituimpia kolikkopelejä, Megaways-hittejä sekä jännittäviä live-kasinon pelejä. Löydä uudet suosikkisi ja nauti eksklusiivisista eduista suomalaisille pelaajille.</p>
+        </div>
+    </section>
+    <section>
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">BigClashin <span class="accent">Suosikit</span></h2>
+            <div class="slots-grid">
+                <div class="slot-card"><img src="images/gonzo-quest.jpg" class="slot-img" alt="Gonzo's Quest"><div class="slot-title">Gonzo's Quest</div><div class="slot-tag">NetEnt</div></div>
+                <div class="slot-card"><img src="images/madame-destiny.jpeg" class="slot-img" alt="Madame Destiny"><div class="slot-title">Madame Destiny</div><div class="slot-tag">Pragmatic Play</div></div>
+                <div class="slot-card"><img src="images/temple-tumple.jpg" class="slot-img" alt="Temple Tumble"><div class="slot-title">Temple Tumble</div><div class="slot-tag">Relax Gaming</div></div>
+                <div class="slot-card"><img src="images/le-bandit.jpg" class="slot-img" alt="Le Bandit"><div class="slot-title">Le Bandit</div><div class="slot-tag">Hacksaw</div></div>
+                <div class="slot-card"><img src="images/sizzling-eggs.jpg" class="slot-img" alt="Sizzling Eggs"><div class="slot-title">Sizzling Eggs</div><div class="slot-tag">Wazdan</div></div>
+                <div class="slot-card"><img src="images/bonanza.jpeg" class="slot-img" alt="Bonanza"><div class="slot-title">Bonanza</div><div class="slot-tag">Big Time Gaming</div></div>
+                <div class="slot-card"><img src="images/bonus-crab.png" class="slot-img" alt="Bonus Crab"><div class="slot-title">Bonus Crab</div><div class="slot-tag">Gamzix</div></div>
+                <div class="slot-card"><img src="images/moon-princess.jpg" class="slot-img" alt="Moon Princess"><div class="slot-title">Moon Princess</div><div class="slot-tag">Play'n GO</div></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Megaways <span class="accent">Kolikkopelit</span></h2>
+            <div class="slots-grid">
+                <div class="slot-card"><img src="images/bonanza.jpeg" class="slot-img" alt="Bonanza Megaways"><div class="slot-title">Bonanza Megaways</div><div class="slot-tag">Big Time Gaming</div></div>
+                <div class="slot-card"><img src="images/temple-tumple.jpg" class="slot-img" alt="Temple Tumble Megaways"><div class="slot-title">Temple Tumble Megaways</div><div class="slot-tag">Relax Gaming</div></div>
+                <div class="slot-card"><img src="images/sizzling-eggs.jpg" class="slot-img" alt="Sizzling Eggs Megaways"><div class="slot-title">Sizzling Eggs Megaways</div><div class="slot-tag">Wazdan</div></div>
+                <div class="slot-card"><img src="images/gonzo-quest.jpg" class="slot-img" alt="Gonzo's Quest Megaways"><div class="slot-title">Gonzo's Quest Megaways</div><div class="slot-tag">NetEnt</div></div>
+                <div class="slot-card"><img src="images/le-bandit.jpg" class="slot-img" alt="Le Bandit Megaways"><div class="slot-title">Le Bandit Megaways</div><div class="slot-tag">Hacksaw</div></div>
+                <div class="slot-card"><img src="images/moon-princess.jpg" class="slot-img" alt="Moon Princess Megaways"><div class="slot-title">Moon Princess Megaways</div><div class="slot-tag">Play'n GO</div></div>
+                <div class="slot-card"><img src="images/bonus-crab.png" class="slot-img" alt="Bonus Crab Megaways"><div class="slot-title">Bonus Crab Megaways</div><div class="slot-tag">Gamzix</div></div>
+                <div class="slot-card"><img src="images/madame-destiny.jpeg" class="slot-img" alt="Madame Destiny Megaways"><div class="slot-title">Madame Destiny Megaways</div><div class="slot-tag">Pragmatic Play</div></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Live <span class="accent">Casino</span></h2>
+            <div class="slots-grid">
+                <div class="slot-card"><img src="images/hero.png" class="slot-img" alt="Lightning Roulette"><div class="slot-title">Lightning Roulette</div><div class="slot-tag">Evolution</div></div>
+                <div class="slot-card"><img src="images/hero.png" class="slot-img" alt="Crazy Time"><div class="slot-title">Crazy Time</div><div class="slot-tag">Evolution</div></div>
+                <div class="slot-card"><img src="images/hero.png" class="slot-img" alt="Monopoly Live"><div class="slot-title">Monopoly Live</div><div class="slot-tag">Evolution</div></div>
+                <div class="slot-card"><img src="images/hero.png" class="slot-img" alt="Blackjack Party"><div class="slot-title">Blackjack Party</div><div class="slot-tag">Evolution</div></div>
+                <div class="slot-card"><img src="images/hero.png" class="slot-img" alt="Immersive Roulette"><div class="slot-title">Immersive Roulette</div><div class="slot-tag">Evolution</div></div>
+                <div class="slot-card"><img src="images/hero.png" class="slot-img" alt="Baccarat Squeeze"><div class="slot-title">Baccarat Squeeze</div><div class="slot-tag">Evolution</div></div>
+                <div class="slot-card"><img src="images/hero.png" class="slot-img" alt="Deal or No Deal"><div class="slot-title">Deal or No Deal</div><div class="slot-tag">Evolution</div></div>
+                <div class="slot-card"><img src="images/hero.png" class="slot-img" alt="Football Studio"><div class="slot-title">Football Studio</div><div class="slot-tag">Evolution</div></div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <h2 class="text-3xl font-bold mb-4">Valmis pelaamaan?</h2>
+        <p class="text-lg text-blue-100 mb-8">Liity BigClash Casinolle ja lunasta eksklusiivinen tervetuliaisbonus sekä pääsy parhaisiin peleihin!</p>
+        <button onclick="redirectToCasino()" class="cta-button pulse">LIITY NYT JA PELAA</button>
+        <div class="mt-6 text-sm text-gray-400">18+ | Pelaa vastuullisesti | Peluuri.fi | BeGambleAware.org</div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-blue-900 bg-opacity-50 py-8 border-t border-blue-600 border-opacity-30">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                        <img src="images/logo.png" alt="BigClash Logo" class="h-24 mx-auto mb-2">
+                        <p class="text-white text-center text-sm">Valmiina suureen yhteenottoon?</p>
+                    </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Asiakastuki</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Live Chat: 24/7</li>
+                        <li>Sähköposti: tuki@bigclash.fi</li>
+                        <li>Puhelin: 09-123-4567</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Vastuullinen pelaaminen</h4>
+                    <div class="space-y-2 text-gray-400 text-sm">
+                        <div>⚠️ Vain 18+</div>
+                        <div>🕒 Aseta rajat</div>
+                        <div>📞 Peliongelman apu: 0800-100-101</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-600 border-opacity-30 pt-6 mt-6 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 BigClash Casino. Kaikki oikeudet pidätetään. | 
+                    <a href="#" class="hover:text-green-400">Käyttöehdot</a> | 
+                    <a href="#" class="hover:text-green-400">Tietosuoja</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function redirectToCasino() { window.location.href = '/go'; }
+    </script>
+</body>
+</html>
